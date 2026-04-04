@@ -63,6 +63,14 @@ envFrom:
   - secretRef:
       name: jwt-secret
 
+volumeMounts:
+  - name: tmp
+    mountPath: /tmp
+
+volumes:
+  - name: tmp
+    emptyDir: {}
+
 serviceAccount:
   create: true
   annotations: {}
