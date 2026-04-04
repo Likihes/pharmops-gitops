@@ -9,11 +9,11 @@ CREATE SCHEMA IF NOT EXISTS distribution;
 CREATE SCHEMA IF NOT EXISTS reporting;
 
 -- Grant permissions
-GRANT ALL PRIVILEGES ON SCHEMA auth TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA drug_catalog TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA inventory TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA manufacturing TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA quality_control TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA supplier TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA distribution TO pharma;
-GRANT ALL PRIVILEGES ON SCHEMA reporting TO pharma;
+GRANT ALL PRIVILEGES ON SCHEMA auth TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA drug_catalog TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA inventory TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA manufacturing TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA quality_control TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA supplier TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA distribution TO pharmaadmin;
+GRANT ALL PRIVILEGES ON SCHEMA reporting TO pharmaadmin;

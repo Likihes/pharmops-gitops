@@ -3,8 +3,8 @@ replicaCount: 1
 fullnameOverride: api-gateway
 
 image:
-  repository: 873135413040.dkr.ecr.us-east-1.amazonaws.com/api-gateway
-  tag: v1.0.2
+  repository: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/api-gateway
+  tag: v1.0.0
   pullPolicy: Always
 
 service:
@@ -56,12 +56,12 @@ readinessProbe:
 
 configmap:
   SPRING_PROFILES_ACTIVE: dev
-  DB_HOST: <RDS_ENDPOINT>
   LOG_LEVEL: DEBUG
-  AUTH_SERVICE_URL: "http://auth-service-dev-pharma-service:8081"
-  DRUG_CATALOG_URL: "http://catalog-service-dev-pharma-service:8082"
-  NOTIFICATION_URL: "http://notification-service-dev-pharma-service:3000"
   SERVER_PORT: "8080"
+  # These match the fullnameOverride values of each service
+  AUTH_SERVICE_URL: "http://auth-service:8081"
+  DRUG_CATALOG_URL: "http://drug-catalog-service:8082"
+  NOTIFICATION_URL: "http://notification-service:3000"
   MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info,metrics,prometheus"
 
 envFrom:
@@ -81,5 +81,5 @@ volumes:
 serviceAccount:
   create: true
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::<AWS_ACCOUNT_ID>:role/pharma-dev-gitlab-runner-role
+    eks.amazonaws.com/role-arn: arn:aws:iam::<AWS_ACCOUNT_ID>:role/pharma-dev-eks-role
   name: api-gateway
