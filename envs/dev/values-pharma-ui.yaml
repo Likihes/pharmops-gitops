@@ -3,7 +3,7 @@ replicaCount: 1
 fullnameOverride: pharma-ui
 
 image:
-  repository: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/pharma-ui
+  repository: 854108470542.dkr.ecr.us-east-1.amazonaws.com/pharma-ui
   tag: v1.0.0
   pullPolicy: Always
 
@@ -18,7 +18,7 @@ ingress:
   annotations:
     # Set to "true" when TLS certificate is configured
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-  host: dev.pharma.internal
+  host: a422aecb32bab48db9ca252dc1078806-82df71076fb61d48.elb.us-east-1.amazonaws.com
   path: /
   pathType: Prefix
 

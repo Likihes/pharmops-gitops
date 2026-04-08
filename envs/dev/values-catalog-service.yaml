@@ -1,11 +1,11 @@
 replicaCount: 1
-
+drug-catalog-service
 # fullnameOverride ensures the Kubernetes service name matches the service directory name
 # and matches the default URL expected by api-gateway
 fullnameOverride: drug-catalog-service
 
 image:
-  repository: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/catalog-service
+  repository: 854108470542.dkr.ecr.us-east-1.amazonaws.com/drug-catalog-service
   tag: v1.0.0
   pullPolicy: Always
 
@@ -56,7 +56,7 @@ readinessProbe:
 
 configmap:
   SPRING_PROFILES_ACTIVE: dev
-  DB_HOST: <RDS_ENDPOINT>
+  DB_HOST: "pharma-dev-postgres.c6j482mw0uko.us-east-1.rds.amazonaws.com:5432"
   LOG_LEVEL: DEBUG
   SERVER_PORT: "8082"
   MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info,metrics,prometheus"
