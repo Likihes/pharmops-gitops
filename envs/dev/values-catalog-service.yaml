@@ -1,5 +1,5 @@
 replicaCount: 1
-drug-catalog-service
+drug-catalog-service:
 # fullnameOverride ensures the Kubernetes service name matches the service directory name
 # and matches the default URL expected by api-gateway
 fullnameOverride: drug-catalog-service
