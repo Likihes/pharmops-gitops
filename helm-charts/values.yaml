@@ -40,7 +40,7 @@ ingress:
   enabled: false
   className: nginx
   annotations: {}
-  host: ""
+  host: ae00a7de45b374c7ebece8f1f23969f3-f32bfceec9c97268.elb.us-east-1.amazonaws.com
   path: /
   pathType: Prefix
   tls: []
