@@ -9,4 +9,8 @@ metadata:
 data:
   API_BASE_URL: "http://dev.pharma.internal/api"
   AUTH_BASE_URL: "http://dev.pharma.internal/auth"
+  default.conf: |
+    upstream api-gateway {
+      server ${API_GATEWAY_HOST}:${API_GATEWAY_PORT};
+    }
   ENV: dev
