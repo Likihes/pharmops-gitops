@@ -37,10 +37,10 @@ service:
   targetPort: 8080
 
 ingress:
-  enabled: true
+  enabled: false
   className: nginx
   annotations: {}
-  host: ae00a7de45b374c7ebece8f1f23969f3-f32bfceec9c97268.elb.us-east-1.amazonaws.com
+  host: ""
   path: /
   pathType: Prefix
   tls: []
